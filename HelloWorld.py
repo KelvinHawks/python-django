@@ -130,23 +130,54 @@ for x in numbers:
        largest = x
        print(largest)
 
-matrix = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
-]
-for row in matrix:
-    print(row)
+# matrix = [
+#     [1,2,3],
+#     [4,5,6],
+#     [7,8,9]
+# ]
+# for row in matrix:
+#     print(row)
+#
+# numbers = [5,5,5,3,2,2,1,7,4]
+# unique_numbers = []
+# numbers.insert(1,20)
+# print(numbers)
+# numbers2 = numbers.copy()
+# numbers.append(10)
+# print(numbers)
+# print(numbers2)
+# for num in numbers:
+#     if num not in unique_numbers:
+#         unique_numbers.append(num)
+# print(unique_numbers)
+customer = {
+     "name":"john smith",
+     "age":30,
+     "is_verified": True
+ }
+print(customer["name"])
 
-numbers = [5,5,5,3,2,2,1,7,4]
-unique_numbers = []
-numbers.insert(1,20)
-print(numbers)
-numbers2 = numbers.copy()
-numbers.append(10)
-print(numbers)
-print(numbers2)
-for num in numbers:
-    if num not in unique_numbers:
-        unique_numbers.append(num)
-print(unique_numbers)
+phone = input("Phone: ")
+digit_mapping = {
+    "1":"one",
+    "2":"two",
+    "3":"three",
+    "4":"four",
+    "5":"five",
+}
+output = ""
+
+for num in phone:
+   output += digit_mapping.get(num, "!") + " "
+
+print(output)
+
+def greet_user(first_name, last_name):
+    print(f"Hi there {first_name} {last_name}")
+    print(f"Welcome aboard {first_name} {last_name}")
+
+
+
+greet_user("John", "njoroge")
+greet_user("mary", "wangui")
+
