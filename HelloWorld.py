@@ -181,3 +181,8 @@ def greet_user(first_name, last_name):
 greet_user("John", "njoroge")
 greet_user("mary", "wangui")
 
+def square(number):
+    return number * number
+
+result = square(3)
+print(result)
