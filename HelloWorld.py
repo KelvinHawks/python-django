@@ -186,3 +186,91 @@ def square(number):
 
 result = square(3)
 print(result)
+try:
+    age = int(input("Age "))
+    income = 20000
+    risk = income/age
+    print(age)
+except ZeroDivisionError:
+    print("Age cannot be 0.")
+except ValueError:
+    print("Invalid value")
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def move(self):
+        print("move")
+    def draw(self):
+        print("draw")
+
+point1 = Point(10, 20)
+print(point1.x)
+point1.draw()
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def talk(self):
+        print(f"Hey I am {self.name}")
+
+person1 = Person("John")
+
+
+person1.talk()
+
+class Mammal:
+    def walk(self):
+        print("walk")
+
+class Dog(Mammal):
+    def bark(self):
+        print("bark")
+
+class Cat(Mammal):
+    def meeaow(self):
+        print("Meeaww")
+
+dog1 = Dog()
+dog1.bark()
+dog1.walk()
+cart1 = Cat()
+cart1.walk()
+cart1.meeaow()
+
+import converters
+from converters import kg_to_lbs
+print(converters.kg_to_lbs(55))
+print(converters.lbs_to_kg(85))
+
+print(kg_to_lbs(55))
+
+import utils
+numbers = [12,10, 3, 6, 2]
+print(utils.find_max(numbers))
+from ecommerce.shipping import  calc_shipping
+calc_shipping()
+import random
+for i in range(3):
+    print (random.randint(5, 20))
+
+members = ["John", "mary", "kelvin","kim","lynn"]
+leader = random.choice(members)
+print(leader)
+
+
+class Dice:
+    def roll(self):
+        numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+        print(f"{random.choice(numbers)}, {random.choice(numbers)}")
+
+
+class1 = Dice()
+class1.roll()
+
+from pathlib import Path
+
+path = Path()
+for file in path.glob('* '):
+    print(file)
